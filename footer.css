@@ -1,0 +1,41 @@
+
+.footer {
+    background-color: #1037EB;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    border-top: 0.15px solid #b1b1b1;
+
+  }
+  
+.end {
+    display: block;
+    justify-self: baseline;
+}
+
+.footer > a {
+    color: white;
+    text-decoration: none;
+    animation: color 5s ease-in-out infinite;
+}
+.footer > a:hover {
+    color: white;
+}
+
+@keyframes color {
+    0% {
+        color: yellow;
+    }
+    25% {
+        color: rgb(0, 0, 0);
+    }
+    50% {
+        color: white;
+    }
+    75% {
+        color: rgb(0, 0, 0);
+    }
+    100% {
+        color: yellow;
+    }
+}

@@ -1,0 +1,23 @@
+body {
+    margin: 0px;
+}
+.nav-logo {
+    height: 60px;
+    padding: 1px;
+}
+.navbar {
+    display: flex;
+    padding: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    justify-content: start;
+    background-color: white;
+    border-bottom: 0.15px solid #b1b1b1;
+}
+.navbar > p {
+    font-size: 36.5px;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 550;
+    color: #1037EB;
+}

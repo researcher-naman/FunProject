@@ -3,32 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SPSU result Check</title>
+    <title>SPSU Result Check</title>
+    <link rel="shortcut icon" href="/download.png" type="image/png">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
 </head>
 <body>
-    <div class="info">
-        <form>
-            <h3>Select Semester:</h3>
-            <select name="semester" id="sem">
-            <option value="I">I</option>
-            <option value="II">II</option>
-            <option value="III">III</option>
-            <option value="IV">IV</option>
-            <option value="V">V</option>
-            <option value="VI">VI</option>
-            <option value="VII">VII</option>
-            <option value="VIII">VIII</option>
-           </select>
-           
+    <!-- Navbar -->
+    <nav class="navbar">
+        <img class="nav-logo" src="/Header-Logo-01.webp">
+        <p class="nav-text">RESULTS</p>
+    </nav>
     
-           <h3>Enter your enrollment number:</h3>
-           <input type="text" placeholder="Enter your number">
-           <br>
-           <br>
-           <button id="submit">Submit</button>
+    <!-- Main Code start -->
+    <section class="Main">
+        <div class="info">
+            <form>
+                <h3>Select Semester:</h3>
+                <select name="semester" id="sem" required>
+                <option value="I">I</option>
+                <option value="II">II</option>
+                <option value="III">III</option>
+                <option value="IV">IV</option>
+                <option value="V">V</option>
+                <option value="VI">VI</option>
+                <option value="VII">VII</option>
+                <option value="VIII">VIII</option>
+               </select>
+               
+               <h3>Select Semester type:</h3>
+               <select name="sem_type" id="semtype" required>
+                <option value="odd">odd</option>
+                <option value="even">even</option>
+               </select>
+        
+               <h3>Enter your enrollment number:</h3>
+               <input type="text" placeholder="Enter your number" id="enroll">
+
+
+               <br>
+               <button id="submit" onclick="display()">Get Result</button>
+        
+            </form>
+        </div>
+    </section>
+    <!-- Main code End -->
     
-        </form>
-    </div>
-</body>
+    <!-- Page footer Starting -->
+    <footer class="end">
+        <div class="footer">
+            Just made for Fun purpose.. Contact <a href="https://nasu.live">@self-nasu</a> for any Query.
+          </div>
+    </footer>
+    <!-- Page footer ending -->
+
+    <!-- Java Script file Linking -->
+    <script>
+        function display() {
+            event.preventDefault();
+            let semester = document.getElementById("sem").value;
+            let semtype = document.getElementById("semtype").value;
+            let enrollmentnumber = (document.getElementById("enroll").value);
+            window.location.replace("https://spsu.servergi.com:8071/ISIMSPSU/Student/StudentExamResult?strFlag=" + enrollmentnumber + "%c6%92Semester-" + semester + "%c6%92"+ semtype +"%20Semester%20-%202023");
+        }
+    </script>
+    </body>
 </html>

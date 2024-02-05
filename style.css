@@ -1,10 +1,10 @@
-body {
+.Main {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
     display: flex;
     justify-content: center;
     align-items: center;
-    height:100vh;
+    height: 85.2vh;
 }
 
 .info {
@@ -28,19 +28,20 @@ form {
 input, select {
     margin-bottom: 16px;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #1037EB;
     border-radius: 4px;
 }
 
 button {
     padding: 12px;
-    background-color: #4caf50;
+    background-color: #1037EB;
     color: #fff;
     border: none;
+    font-size: 14px;
     border-radius: 4px;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #004fce;
 }
